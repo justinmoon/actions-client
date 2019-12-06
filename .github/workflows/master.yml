@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v1
-      - name: Deploy on Zeit - Prod
-        run: now --token $ZEIT_TOKEN
+      - name: Deploy Frontend to Production
+        run: now --token $ZEIT_TOKEN --prod
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
