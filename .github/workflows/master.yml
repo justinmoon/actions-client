@@ -24,5 +24,3 @@ jobs:
         run: now
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
-        with:
-          args: --prod
