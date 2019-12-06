@@ -1,5 +1,5 @@
 
-name: Deploy to Now
+name: Deploy to Staging
 on:
   push:
     branches:
@@ -7,12 +7,12 @@ on:
 
 jobs:
   publish:
-    name: Publish to prod
+    name: Publish to Staging
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v1
-      - name: Deploy Frontend to Staging
+      - name: Deploy to Zeit Now
         run: now --token $ZEIT_TOKEN
         env:
           ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
